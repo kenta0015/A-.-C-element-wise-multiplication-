@@ -22,3 +22,10 @@ def pop(self):
             raise KeyError("Queue is empty")
         item = self.queue[self.front]
         self.queue
+        
+def add(self, item):
+        if self.size == self.capacity:
+            self.__resize(2 * self.capacity)
+        self.rear = (self.rear + 1) % self.capacity
+        self.queue[self.rear] = item
+        self.size += 1
