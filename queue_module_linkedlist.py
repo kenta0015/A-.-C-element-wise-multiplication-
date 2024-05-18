@@ -35,3 +35,11 @@ class LinkedListQueue:
         if self.is_empty():
             raise KeyError("Queue is empty")
         return self.front.data
+    
+    def __contains__(self, data):
+        current = self.front
+        while current:
+            if current.data == data:
+                return True
+            current = current.next
+        return False
