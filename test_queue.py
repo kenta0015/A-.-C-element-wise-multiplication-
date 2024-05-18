@@ -30,4 +30,8 @@ def test_queue(queue_class):
     q2.add(40)
     assert q != q2, "Test __eq__() failed"
     
+    # Test clear()
+    q.clear()
+    assert q.is_empty() == True, "Test clear() failed"
+    
     print(f"All tests passed for {queue_class.__name__}")
