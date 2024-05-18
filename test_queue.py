@@ -34,4 +34,10 @@ def test_queue(queue_class):
     q.clear()
     assert q.is_empty() == True, "Test clear() failed"
     
+    # Test __str__()
+    q.add(50)
+    assert str(q) == "[50]", "Test __str__() failed"
+    
     print(f"All tests passed for {queue_class.__name__}")
+
+   
