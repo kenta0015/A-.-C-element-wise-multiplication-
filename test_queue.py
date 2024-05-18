@@ -23,4 +23,11 @@ def test_queue(queue_class):
     assert 30 in q, "Test __contains__() failed"
     assert 40 not in q, "Test __contains__() failed"
     
+    # Test __eq__()
+    q2 = queue_class()
+    q2.add(30)
+    assert q == q2, "Test __eq__() failed"
+    q2.add(40)
+    assert q != q2, "Test __eq__() failed"
+    
     print(f"All tests passed for {queue_class.__name__}")
