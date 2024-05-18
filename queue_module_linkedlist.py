@@ -8,3 +8,5 @@ class LinkedListQueue:
         self.front = None
         self.rear = None
         self.size = 0
+    def is_empty(self):
+        return self.size == 0
