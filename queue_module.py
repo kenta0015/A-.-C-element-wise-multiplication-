@@ -16,3 +16,9 @@ def __str__(self):
         if self.IsEmpty():
             return "Queue is empty"
         return str([self.queue[(self.front + i) % self.capacity] for i in range(self.size)])
+
+def pop(self):
+        if self.IsEmpty():
+            raise KeyError("Queue is empty")
+        item = self.queue[self.front]
+        self.queue
