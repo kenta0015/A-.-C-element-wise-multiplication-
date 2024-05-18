@@ -30,3 +30,8 @@ class LinkedListQueue:
         if self.is_empty():
             self.rear = None
         return data
+    
+    def peek(self):
+        if self.is_empty():
+            raise KeyError("Queue is empty")
+        return self.front.data
