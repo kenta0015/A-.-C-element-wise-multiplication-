@@ -43,3 +43,15 @@ class LinkedListQueue:
                 return True
             current = current.next
         return False
+    
+    def __eq__(self, other):
+        if len(self) != len(other):
+            return False
+        current_self = self.front
+        current_other = other.front
+        while current_self:
+            if current_self.data != current_other.data:
+                return False
+            current_self = current_self.next
+            current_other = current_other.next
+        return True
