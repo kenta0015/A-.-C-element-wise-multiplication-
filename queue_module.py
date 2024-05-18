@@ -29,3 +29,12 @@ def add(self, item):
         self.rear = (self.rear + 1) % self.capacity
         self.queue[self.rear] = item
         self.size += 1
+        
+def __resize(self, new_capacity):
+        old_queue = self.queue
+        self.queue = [None] * new_capacity
+        for i in range(self.size):
+            self.queue[i] = old_queue[(self.front + i) % self.capacity]
+        self.front = 0
+        self.rear = self.size - 1
+        self.capacity = new_capacity
