@@ -75,3 +75,11 @@ class LinkedListQueue:
         while current:
             yield current.data
             current = current.next
+            
+    def __add__(self, other):
+        result = LinkedListQueue()
+        for item in self:
+            result.add(item)
+        for item in other:
+            result.add(item)
+        return result
