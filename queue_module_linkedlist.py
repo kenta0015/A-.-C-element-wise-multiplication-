@@ -20,3 +20,13 @@ class LinkedListQueue:
             self.rear.next = new_node
             self.rear = new_node
         self.size += 1
+        
+    def pop(self):
+        if self.is_empty():
+            raise KeyError("Queue is empty")
+        data = self.front.data
+        self.front = self.front.next
+        self.size -= 1
+        if self.is_empty():
+            self.rear = None
+        return data
