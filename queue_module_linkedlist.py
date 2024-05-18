@@ -55,3 +55,7 @@ class LinkedListQueue:
             current_self = current_self.next
             current_other = current_other.next
         return True
+    
+    def clear(self):
+        self.front = self.rear = None
+        self.size = 0
