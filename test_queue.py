@@ -19,4 +19,8 @@ def test_queue(queue_class):
     q.add(30)
     assert q.peek() == 30, "Test peek() failed"
     
+    # Test __contains__()
+    assert 30 in q, "Test __contains__() failed"
+    assert 40 not in q, "Test __contains__() failed"
+    
     print(f"All tests passed for {queue_class.__name__}")
