@@ -59,3 +59,13 @@ class LinkedListQueue:
     def clear(self):
         self.front = self.rear = None
         self.size = 0
+        
+    def __str__(self):
+        if self.is_empty():
+            return "Queue is empty"
+        result = []
+        current = self.front
+        while current:
+            result.append(current.data)
+            current = current.next
+        return str(result)
