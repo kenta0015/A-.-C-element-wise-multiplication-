@@ -15,4 +15,8 @@ def test_queue(queue_class):
     assert q.pop() == 20, "Test pop() failed"
     assert q.is_empty() == True, "Test is_empty() after pop() failed"
     
+    # Test peek()
+    q.add(30)
+    assert q.peek() == 30, "Test peek() failed"
+    
     print(f"All tests passed for {queue_class.__name__}")
