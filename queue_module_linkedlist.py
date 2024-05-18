@@ -69,3 +69,9 @@ class LinkedListQueue:
             result.append(current.data)
             current = current.next
         return str(result)
+    
+    def __iter__(self):
+        current = self.front
+        while current:
+            yield current.data
+            current = current.next
